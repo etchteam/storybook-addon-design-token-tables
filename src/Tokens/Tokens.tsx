@@ -10,7 +10,7 @@ function getTokens(
 ): { key: string; value: string }[] {
   let match;
 
-  const rootRegex = /:root\s*{([^}]*)}/g;
+  const rootRegex = /:root\s*\{([\s\S]*?)\}[\s\n]*$/g;
   const root = [] as string[];
 
   while ((match = rootRegex.exec(rawTokens)) !== null) {
@@ -100,8 +100,6 @@ export default function Tokens({
             'line-height',
             'font-weight',
           ].includes(previewType);
-
-          console.log(previewType);
 
           return (
             <tr key={token.key}>
