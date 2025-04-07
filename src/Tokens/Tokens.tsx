@@ -1,10 +1,13 @@
+import { DocsContext } from '@storybook/blocks';
 import cx from 'classnames';
 import React from 'react';
-import { DocsContext } from '@storybook/blocks';
 
 import styles from './Tokens.module.css';
 
-function getTokens(rawTokens: string, collection: string): { key: string; value: string }[] {
+function getTokens(
+  rawTokens: string,
+  collection: string,
+): { key: string; value: string }[] {
   let match;
 
   const rootRegex = /:root\s*{([^}]*)}/g;
@@ -30,7 +33,11 @@ function getTokens(rawTokens: string, collection: string): { key: string; value:
   return tokens;
 }
 
-function getPreviewType(token: { key: string; value: string }, collection: string, collections: Record<string, string>): string {
+function getPreviewType(
+  token: { key: string; value: string },
+  collection: string,
+  collections: Record<string, string>,
+): string {
   // Tirst try to get the collection by value
   for (const collectionKey in collections) {
     if (token.value.includes(collectionKey)) {
@@ -44,6 +51,18 @@ function getPreviewType(token: { key: string; value: string }, collection: strin
     }
   }
 
+  if (
+    token.value.includes('#') ||
+    token.value.includes('rgb') ||
+    token.value.includes('transparent')
+  ) {
+    return 'color';
+  }
+
+  if (token.value.includes('px')) {
+    return 'spacing';
+  }
+
   return collections[collection];
 }
 
@@ -53,7 +72,8 @@ export default function Tokens({
   readonly collection: string;
 }) {
   const docsContext = React.useContext(DocsContext);
-  const addonParameters = docsContext.projectAnnotations.parameters?.designTokenTables || {
+  const addonParameters = docsContext.projectAnnotations.parameters
+    ?.designTokenTables || {
     tokens: [],
     collections: {},
   };
@@ -86,9 +106,7 @@ export default function Tokens({
           return (
             <tr key={token.key}>
               <td>{token.key}</td>
-              <td>
-                {token.value}
-              </td>
+              <td>{token.value}</td>
               <td
                 className={cx([
                   styles['tokens__preview-cell'],
