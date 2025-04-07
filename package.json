@@ -1,0 +1,59 @@
+{
+  "name": "@etchteam/storybook-addon-design-token-tables",
+  "version": "1.0.0",
+  "description": "Storybook addon for design token tables",
+  "keywords": [
+    "storybook-addons",
+    "design tokens",
+    "design",
+    "tokens",
+    "storybook",
+    "storybook-addon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etchteam/storybook-addon-design-token-tables"
+  },
+  "author": "Etch",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "copy-css": "mkdir -p dist/Tokens && cp src/Tokens/Tokens.module.css dist/Tokens/",
+    "build": "npm run clean && tsc && npm run copy-css",
+    "build:watch": "npm run clean && tsc -w & npm run copy-css",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "storybook": {
+    "displayName": "Design token tables",
+    "supportedFrameworks": [
+      "react",
+      "vue",
+      "angular",
+      "web-components"
+    ]
+  },
+  "devDependencies": {
+    "@etchteam/eslint-config": "2.2.39",
+    "@storybook/blocks": "8.6.12",
+    "@types/node": "^18.0.0",
+    "@types/react": "19.1.0",
+    "eslint": "8.57.1",
+    "husky": "9.1.7",
+    "lint-staged": "15.5.0",
+    "prettier": "3.5.3",
+    "react": "19.1.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "classnames": "2.5.1"
+  }
+}

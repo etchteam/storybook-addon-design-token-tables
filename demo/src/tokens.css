@@ -1,0 +1,49 @@
+:root {
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  --palette-red: #ff0000;
+  --palette-green: #00ff00;
+  --palette-blue: #0000ff;
+  --palette-yellow: #ffff00;
+  --palette-orange: #ff7f00;
+  --palette-purple: #7f00ff;
+  --palette-pink: #ff00ff;
+  --palette-gray: #808080;
+  --palette-black: #000000;
+  --palette-white: #ffffff;
+
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 2rem;
+
+  --font-family: Arial, sans-serif;
+
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --line-height: 1.5;
+  --line-height-sm: 1.2;
+
+  --opacity-xs: 0.1;
+  --opacity-sm: 0.25;
+  --opacity-md: 0.5;
+  --opacity-lg: 0.75;
+  --opacity-xl: 1;
+
+  --button-background: var(--palette-blue);
+  --button-color: var(--palette-white);
+  --button-border-radius: var(--radius-sm);
+  --button-padding-inline: var(--spacing-sm);
+  --button-padding-block: var(--spacing-xs);
+}

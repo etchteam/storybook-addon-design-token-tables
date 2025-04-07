@@ -1,0 +1,24 @@
+{
+  "name": "design-token-tables-demo",
+  "version": "1.0.0",
+  "description": "Demo for storybook-addon-design-token-tables",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@etchteam/storybook-addon-design-token-tables": "file:../",
+    "@storybook/addon-docs": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@vitejs/plugin-react": "^4.2.1",
+    "storybook": "^8.6.12",
+    "vite": "^5.0.8"
+  }
+}
