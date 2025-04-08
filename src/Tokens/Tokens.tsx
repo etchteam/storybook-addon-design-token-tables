@@ -63,7 +63,15 @@ function getPreviewType(
     return 'spacing';
   }
 
-  return collections[collection];
+  return collections[collection] || '';
+}
+
+function getContent(previewType: string, hasText: boolean): string {
+  if (!previewType) {
+    return 'N/A';
+  }
+
+  return hasText ? 'Lorem ipsum' : '';
 }
 
 export default function Tokens({
@@ -120,7 +128,7 @@ export default function Tokens({
                     styles[`tokens__preview--${previewType}`],
                   ])}
                 >
-                  {hasText ? 'Lorem ipsum' : ''}
+                  {getContent(previewType, hasText)}
                 </div>
               </td>
             </tr>

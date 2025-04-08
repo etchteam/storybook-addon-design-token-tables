@@ -1,6 +1,7 @@
 .tokens {
   line-height: 1.5;
   margin-block: 1rem;
+  white-space: nowrap;
   width: 100%;
 
   th {
@@ -15,6 +16,15 @@
   td {
     min-height: 24px;
   }
+}
+
+.tokens__preview--border {
+  border: var(--token-preview);
+  border-bottom-width: 0;
+  border-radius: .5rem 0 0 0;
+  border-right-width: 0;
+  height: 2rem;
+  width: 2rem;
 }
 
 .tokens__preview-cell--color {

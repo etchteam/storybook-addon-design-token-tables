@@ -16,6 +16,7 @@ const preview = {
         shadow: 'shadow',
         spacing: 'spacing',
         opacity: 'opacity',
+        shadow: 'shadow',
       },
       tokens: [
         rawTokens,
