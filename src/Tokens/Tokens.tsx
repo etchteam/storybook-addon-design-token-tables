@@ -19,6 +19,7 @@ function getTokens(
 
   const allTokens = root.join('\n');
 
+  // eslint-disable-next-line security/detect-non-literal-regexp
   const regex = new RegExp(`--${collection}[a-z0-9-^:]*: [^;]+;`, 'gs');
   const tokens = [] as { key: string; value: string }[];
 

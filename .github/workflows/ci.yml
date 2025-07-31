@@ -1,36 +1,30 @@
 ---
 name: 👮 CI
-on:
-  pull_request:
-    branches:
-    - main
+on: ['pull_request']
+permissions:
+  contents: read
 jobs:
   lint:
+    permissions:
+      contents: read
+      pull-requests: write
+    name: 🧹 Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: github/super-linter/slim@v4
-        env:
-          LINTER_RULES_PATH: /
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: 'master'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # We use our own lint script for JavaScript to avoid config clashes
-          VALIDATE_JAVASCRIPT_STANDARD: false
-          VALIDATE_JAVASCRIPT_ES: false
-          VALIDATE_JSX: false
-          VALIDATE_CSS: false
-          VALIDATE_HTML: false
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - name: Lint JS
-        run: npx --no -- eslint src
-  build:
+      - uses: oxsecurity/megalinter/flavors/javascript@v8.8.0
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  test:
+    name: 🧪 Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,4 +33,4 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - run: npm run build
+      - run: npm test
