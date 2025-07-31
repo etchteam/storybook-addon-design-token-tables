@@ -1,16 +1,12 @@
 const config = {
-  stories: [
-    '../src/**/*.mdx',
-  ],
+  stories: ['../src/**/*.mdx'],
 
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {},
   },
 
-  addons: [
-    '@storybook/addon-docs'
-  ]
+  addons: ['@storybook/addon-docs'],
 };
 
 export default config;
