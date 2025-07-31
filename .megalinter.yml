@@ -1,0 +1,31 @@
+# Configuration file for MegaLinter
+#
+# See all available variables at https://megalinter.io/latest/config-file/ and in
+# linters documentation
+---
+APPLY_FIXES: none
+
+DISABLE_LINTERS:
+  - COPYPASTE_JSCPD # Sonarcloud handles this for us
+  - JAVASCRIPT_STANDARD # Disable in favour of eslint
+  - MARKDOWN_MARKDOWN_LINK_CHECK # Our links are private
+  - REPOSITORY_GRYPE # We use dependabot for vulnerability monitoring and patching
+  - REPOSITORY_TRIVY # No iac and dependabot handles vulnerabilities
+  - SPELL_LYCHEE # Our links are private
+  - TYPESCRIPT_STANDARD # Disable in favour of eslint
+
+SHOW_ELAPSED_TIME: true
+FILEIO_REPORTER: false
+
+# Config paths
+JAVASCRIPT_ES_CONFIG_FILE: eslint.config.js
+TYPESCRIPT_ES_CONFIG_FILE: eslint.config.js
+
+REPOSITORY_GITLEAKS_PR_COMMITS_SCAN: true
+# --no--eslintrc blows up the linter with our new eslint config
+JAVASCRIPT_ES_COMMAND_REMOVE_ARGUMENTS: --no-eslintrc
+TYPESCRIPT_ES_COMMAND_REMOVE_ARGUMENTS: --no-eslintrc
+SPELL_CSPELL_ANALYZE_FILE_NAMES: false
+SPELL_CSPELL_FILE_EXTENSIONS: ['.tsx', '.stories.ts', '.md']
+JAVASCRIPT_ES_CLI_EXECUTABLE: ['./node_modules/.bin/eslint']
+TYPESCRIPT_ES_CLI_EXECUTABLE: ['./node_modules/.bin/eslint']
