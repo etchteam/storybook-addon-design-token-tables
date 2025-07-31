@@ -8,17 +8,16 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@etchteam/storybook-addon-design-token-tables": "file:../",
-    "@storybook/addon-docs": "^8.6.12",
-    "@storybook/blocks": "^8.6.12",
-    "@storybook/react": "^8.6.12",
-    "@storybook/react-vite": "^8.6.12",
-    "@vitejs/plugin-react": "^4.2.1",
-    "storybook": "^8.6.12",
-    "vite": "^6.3.5"
+    "@storybook/addon-docs": "9.0.18",
+    "@storybook/react-vite": "9.0.18",
+    "@vitejs/plugin-react": "^4.7.0",
+    "storybook": "9.0.18",
+    "vite": "^7.0.6",
+    "eslint-plugin-storybook": "9.0.18"
   }
 }

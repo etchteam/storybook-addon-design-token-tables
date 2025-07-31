@@ -1,4 +1,4 @@
-import { DocsContext } from '@storybook/blocks';
+import { DocsContext } from '@storybook/addon-docs/blocks';
 import cx from 'classnames';
 import React from 'react';
 
@@ -19,6 +19,7 @@ function getTokens(
 
   const allTokens = root.join('\n');
 
+  // eslint-disable-next-line security/detect-non-literal-regexp
   const regex = new RegExp(`--${collection}[a-z0-9-^:]*: [^;]+;`, 'gs');
   const tokens = [] as { key: string; value: string }[];
 
@@ -38,7 +39,7 @@ function getPreviewType(
   collection: string,
   collections: Record<string, string>,
 ): string {
-  // Tirst try to get the collection by value
+  // First try to get the collection by value
   for (const collectionKey in collections) {
     if (token.value.includes(collectionKey)) {
       return collections[collectionKey];
