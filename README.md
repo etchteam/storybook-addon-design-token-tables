@@ -59,7 +59,7 @@ Create MDX files that use the `<Tokens>` component to display your design tokens
 
 ```mdx
 // Colors.mdx
-import { Meta } from '@storybook/blocks';
+import { Meta } from '@storybook/addon-docs/blocks';
 import { Tokens } from '@etchteam/storybook-addon-design-token-tables';
 
 <Meta title="Design Tokens/Colors" />

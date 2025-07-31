@@ -1,4 +1,4 @@
-import { DocsContext } from '@storybook/blocks';
+import { DocsContext } from '@storybook/addon-docs/blocks';
 import cx from 'classnames';
 import React from 'react';
 

@@ -13,12 +13,11 @@
   },
   "devDependencies": {
     "@etchteam/storybook-addon-design-token-tables": "file:../",
-    "@storybook/addon-docs": "^8.6.12",
-    "@storybook/blocks": "^8.6.12",
-    "@storybook/react": "^8.6.12",
-    "@storybook/react-vite": "^8.6.12",
+    "@storybook/addon-docs": "9.0.18",
+    "@storybook/react-vite": "9.0.18",
     "@vitejs/plugin-react": "^4.2.1",
-    "storybook": "^8.6.12",
-    "vite": "^6.3.5"
+    "storybook": "9.0.18",
+    "vite": "^6.3.5",
+    "eslint-plugin-storybook": "9.0.18"
   }
 }
