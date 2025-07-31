@@ -20,6 +20,7 @@
             node-version-file: .nvmrc
             cache: npm
         - run: npm ci
+        - run: npm audit signatures
         - name: Publish
           env:
             GH_TOKEN: ${{ secrets.GH_TOKEN }}
