@@ -39,7 +39,7 @@ function getPreviewType(
   collection: string,
   collections: Record<string, string>,
 ): string {
-  // Tirst try to get the collection by value
+  // First try to get the collection by value
   for (const collectionKey in collections) {
     if (token.value.includes(collectionKey)) {
       return collections[collectionKey];
