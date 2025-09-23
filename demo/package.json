@@ -17,7 +17,7 @@
     "@storybook/react-vite": "9.0.18",
     "@vitejs/plugin-react": "^4.7.0",
     "storybook": "9.0.18",
-    "vite": "^7.0.6",
+    "vite": "^7.1.5",
     "eslint-plugin-storybook": "9.0.18"
   }
 }
