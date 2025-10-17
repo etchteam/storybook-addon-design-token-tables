@@ -10,7 +10,8 @@ function getTokens(
 ): { key: string; value: string }[] {
   let match;
 
-  const rootRegex = /^:root\s*\{([\s\S]*?)\}[\s\n]*$/gm;
+  // eslint-disable-next-line security/detect-unsafe-regex
+  const rootRegex = /^:root(?:\s*,\s*::backdrop)?\s*\{([\s\S]*?)\}[\s\n]*$/gm;
   const root = [] as string[];
 
   while ((match = rootRegex.exec(rawTokens)) !== null) {
