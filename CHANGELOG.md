@@ -1,3 +1,11 @@
+## [1.1.0](https://github.com/etchteam/storybook-addon-design-token-tables/compare/v1.0.0...v1.1.0) (2026-02-09)
+
+### Features
+
+* add truster publishers ([d95c4c1](https://github.com/etchteam/storybook-addon-design-token-tables/commit/d95c4c11706184610bfa2bbb77f467f60effa329))
+* support tokens in scope ([91b781c](https://github.com/etchteam/storybook-addon-design-token-tables/commit/91b781c788d292ac6809b2f615c09b4bc5159208))
+* update semantic release ([468e014](https://github.com/etchteam/storybook-addon-design-token-tables/commit/468e0145c4674dffc3d64310552c54ae9d17c47d))
+
 ## 1.0.0 (2025-10-17)
 
 ### ⚠ BREAKING CHANGES
