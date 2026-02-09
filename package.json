@@ -1,6 +1,6 @@
 {
   "name": "@etchteam/storybook-addon-design-token-tables",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Storybook addon for design token tables",
   "keywords": [
     "storybook-addons",
