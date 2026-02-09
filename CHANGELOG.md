@@ -1,3 +1,9 @@
+## [2.1.0](https://github.com/etchteam/storybook-addon-design-token-tables/compare/v2.0.0...v2.1.0) (2026-02-09)
+
+### Features
+
+* fix unsafe regex and sync package version ([7ffe7dd](https://github.com/etchteam/storybook-addon-design-token-tables/commit/7ffe7dde2a4d5c721b749809d7d13104093a5713))
+
 ## [1.1.0](https://github.com/etchteam/storybook-addon-design-token-tables/compare/v1.0.0...v1.1.0) (2026-02-09)
 
 ### Features
