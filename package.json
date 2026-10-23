@@ -28,7 +28,7 @@
     "build": "npm run clean && tsc && npm run copy-css",
     "build:watch": "npm run clean && tsc -w & npm run copy-css",
     "prepublishOnly": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "node --test \"src/**/*.test.ts\"",
     "prepare": "husky",
     "release": "semantic-release"
   },

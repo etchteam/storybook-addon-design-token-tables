@@ -24,6 +24,9 @@
   --radius-xl: 2rem;
 
   --font-family: Arial, sans-serif;
+  --font-family-system:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
 
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
