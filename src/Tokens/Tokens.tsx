@@ -3,36 +3,7 @@ import cx from 'classnames';
 import React from 'react';
 
 import styles from './Tokens.module.css';
-
-function getTokens(
-  rawTokens: string,
-  collection: string,
-): { key: string; value: string }[] {
-  let match;
-
-  const rootRegex = /^(?::root|:scope)[^{]*\{([^}]*)\}\s*$/gm;
-  const root = [] as string[];
-
-  while ((match = rootRegex.exec(rawTokens)) !== null) {
-    root.push(match[0]);
-  }
-
-  const allTokens = root.join('\n');
-
-  // eslint-disable-next-line security/detect-non-literal-regexp
-  const regex = new RegExp(`--${collection}[a-z0-9-^:]*: [^;]+;`, 'gs');
-  const tokens = [] as { key: string; value: string }[];
-
-  while ((match = regex.exec(allTokens ?? '')) !== null) {
-    const [key, value] = match[0].replace(';', '').split(': ');
-    tokens.push({
-      key: key,
-      value: value,
-    });
-  }
-
-  return tokens;
-}
+import getTokens from './getTokens';
 
 function getPreviewType(
   token: { key: string; value: string },
